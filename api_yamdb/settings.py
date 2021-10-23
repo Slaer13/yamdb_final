@@ -24,6 +24,7 @@ ALLOWED_HOSTS = [
     'darkertheblack.ru',
     'www.darkertheblack.ru',
     '130.193.34.33',
+    'web',
     '127.0.0.1',
     '[::1]',
     'testserver',
