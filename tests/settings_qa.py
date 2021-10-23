@@ -1,5 +1,7 @@
 from api_yamdb.settings import *
 
+SECRET_KEY = 'secret'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
