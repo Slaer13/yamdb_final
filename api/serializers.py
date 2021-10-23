@@ -2,7 +2,6 @@ from django.core import validators as vl
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers, validators
 
-
 from .models import Category, Comment, CustomUser, Genre, Review, Title
 from .validators import custom_year_validator
 
