@@ -19,16 +19,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-4e-6h1o^28f3u
 
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    'localhost',
-    'darkertheblack.ru',
-    'www.darkertheblack.ru',
-    '130.193.34.33',
-    'web',
-    '127.0.0.1',
-    '[::1]',
-    'testserver',
-]
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
