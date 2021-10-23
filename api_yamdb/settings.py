@@ -2,7 +2,14 @@ import os
 from datetime import timedelta
 from pathlib import Path
 
+import sentry_sdk
 from dotenv import load_dotenv
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://25ec71d65cb54852aca8e34ecb6dcf35@o1023338.ingest.sentry.io/5989663",
+    integrations=[DjangoIntegration()],
+)
 
 load_dotenv()
 
@@ -12,8 +19,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-4e-6h1o^28f3u
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = [
+    'localhost',
+    'darkertheblack.ru',
+    'www.darkertheblack.ru',
+    '130.193.34.33',
+    '127.0.0.1',
+    '[::1]',
+    'testserver',
+]
 # Application definition
 
 INSTALLED_APPS = [
