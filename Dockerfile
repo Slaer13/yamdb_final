@@ -5,4 +5,4 @@ COPY requirements.txt .
 RUN python3 -m pip install --upgrade pip \
     && pip3 install -r /code/requirements.txt --no-cache-dir
 COPY . .
-CMD gunicorn yamdb_final.wsgi:application --bind 0.0.0.0:8000
+CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
