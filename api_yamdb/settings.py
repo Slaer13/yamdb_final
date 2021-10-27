@@ -15,11 +15,12 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-4e-6h1o^28f3u4rma(vj_99*p!j9g=1ojao_f53^iyqx0u_x7n')
+SECRET_KEY = os.environ.get('SECRET_KEY',
+                            default='django-insecure-4e-6h1o^28f3u4rma(vj_99*p!j9g=1ojao_f53^iyqx0u_x7n')
 
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', default='*').split(' ')
 # Application definition
 
 INSTALLED_APPS = [
@@ -68,7 +69,8 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('DB_ENGINE', default='django.db.backends.postgresql'),
+        'ENGINE': os.environ.get('DB_ENGINE',
+                                 default='django.db.backends.postgresql'),
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('POSTGRES_USER'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
@@ -98,7 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
