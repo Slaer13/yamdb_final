@@ -30,7 +30,7 @@ sudo docker-compose exec web python manage.py collectstatic --noinput
 ```
 #### Применитe миграции:
 ```
-sudi docker-compose exec web python manage.py makemigrations
+sudo docker-compose exec web python manage.py makemigrations
 sudo docker-compose exec web python manage.py migrate --noinput
 ```
 #### Загрузите ингридиенты в базу данных (не обязательно)
@@ -69,15 +69,15 @@ DEBUG = <режим отладки> (0 или 1)
 - Отправка уведомления в телеграм-чат.
 
 
-##Админка находится по адресу:
+## Админка находится по адресу:
 ```
 http://darkertheblack.ru/admin/
 ```
-##API
+## API
 ```
 http://darkertheblack.ru/api/v1/
 ```
-##Redoc
+## Redoc
 ```
 http://darkertheblack.ru/redoc/
 ```
