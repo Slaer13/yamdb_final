@@ -71,13 +71,13 @@ DEBUG = <режим отладки> (0 или 1)
 
 ## Админка находится по адресу:
 ```
-http://darkertheblack.ru/admin/
+http:/yousite.com/admin/
 ```
 ## API
 ```
-http://darkertheblack.ru/api/v1/
+http://yousite.com/api/v1/
 ```
 ## Redoc
 ```
-http://darkertheblack.ru/redoc/
+http://yousite.com/redoc/
 ```
